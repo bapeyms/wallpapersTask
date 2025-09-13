@@ -6,8 +6,8 @@ class Wallpapers
 	double wallpapersWidth;
 	double price;
 public:
-	Wallpapers();
 	Wallpapers(const char* wallName, double wallLength, double wallWidth, double pr);
+	Wallpapers();
 	~Wallpapers();
 };
 
