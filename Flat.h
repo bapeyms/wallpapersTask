@@ -1,4 +1,6 @@
 #pragma once
+class Room;
+
 class Flat
 {
 	Room* roomList;

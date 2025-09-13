@@ -7,5 +7,10 @@ class Room
 public:
 	Room();
 	~Room();
+
+	int RoomCheck();
+	void EnterRoomsValues();
+	void PrintRoomsValues();
+	char* GetRooms();
 };
 
