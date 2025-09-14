@@ -16,6 +16,5 @@ public:
 	void EnterRoomsValues();
 	void PrintRoomsValues();
 	char* GetRooms();
-	double GetHeight();
 };
 

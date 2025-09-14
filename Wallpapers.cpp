@@ -17,23 +17,20 @@ Wallpapers::Wallpapers(const char* wallName, double lenght, double width, double
 
 }
 
-
 double Wallpapers::WallpaperArea()
 {
 	return wallpapersLength * wallpapersWidth;
 }
-
 double Wallpapers::NumberOfRolls(double roomArea)
 {
 	double rollArea = WallpaperArea(); 
-	int rolls = static_cast<int>(roomArea / rollArea);
-	if (roomArea > rolls * rollArea)
+	int numberOfRolls = static_cast<int>(roomArea / rollArea);
+	if (roomArea > numberOfRolls * rollArea)
 	{
-		rolls++;
+		numberOfRolls++;
 	}
-	return rolls;
+	return numberOfRolls;
 }
-
 void Wallpapers::PrintWallpapers()
 {
 	cout << "Length: " << wallpapersLength << " m" << endl;
@@ -44,6 +41,10 @@ void Wallpapers::PrintWallpapers()
 const char* Wallpapers::GetWallpapersName()
 {
 	return wallpapersName;
+}
+double Wallpapers::GetWallpapersPrice()
+{
+	return price;
 }
 
 Wallpapers::~Wallpapers()

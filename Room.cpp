@@ -98,8 +98,3 @@ char* Room::GetRooms()
 	return roomName;
 }
 
-double Room::GetHeight()
-{
-	return roomHeight;
-}
-

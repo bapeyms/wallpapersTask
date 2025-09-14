@@ -14,5 +14,5 @@ public:
 	double NumberOfRolls(double roomArea);
 	void PrintWallpapers();
 	const char* GetWallpapersName();
-	
+	double GetWallpapersPrice();
 };
