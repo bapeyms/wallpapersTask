@@ -8,14 +8,22 @@ int main()
 {
 	cout << "- THE PRICE OF WALLPAPERS -" << endl << endl;
 
+	// статичний масив використаний через те, що для користувачів каталог із доступних шпалер
+	// виглядає вказаним за замовчуванням, тобто він не може редагуватися
+	cout << "- WALLPAPER CATALOG -" << endl;
 	const int numberOfWallpapers = 5;
-	Wallpapers allWalls[numberOfWallpapers] = {
-		{"Wallperoni Deluxe", 0.53, 10.0, 250.0},
-		{"Sad Beige Vibes", 0.7, 12.0, 320.0},
-		{"Grandma's Couch 4K", 0.87, 15.9, 280.0},
-		{"Emo Brick Pattern", 0.93, 13.6, 409.0},
-		{"Default Windows 95 Dreams", 0.6, 14.0, 800.0}
+	Wallpapers allWallpapers[5] = {
+		Wallpapers("Velora Mist", 10.5, 53.0, 28.0),
+		Wallpapers("Eclipse Bloom", 10.5, 70.0, 42.0),
+		Wallpapers("Aurora Veil", 10.5, 53.0, 35.0),
+		Wallpapers("Lunar Tides", 10.5, 106.0, 55.0),
+		Wallpapers("Seraphine Drift", 10.5, 53.0, 31.0)
 	};
+	for (int i = 0; i < numberOfWallpapers; i++)
+	{
+		cout << "Wallpaper #" << i + 1 << ": " << allWallpapers[i].GetWallpapersName() << endl;
+		allWallpapers[i].PrintWallpapers();
+	}
 
 	int numberOfRooms;
 	cout << "Desired number of rooms: ";

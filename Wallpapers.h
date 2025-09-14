@@ -1,13 +1,14 @@
 #pragma once
 class Wallpapers
 {
-	const char* wallpapersName;
+	char* wallpapersName;
 	double wallpapersLength;
 	double wallpapersWidth;
 	double price;
 public:
-	Wallpapers(const char* wallName, double wallLength, double wallWidth, double pr);
 	Wallpapers();
+	Wallpapers(const char* wallName, double lenght, double width, double pr);
+	void PrintWallpapers();
+	const char* GetWallpapersName();
 	~Wallpapers();
 };
-
