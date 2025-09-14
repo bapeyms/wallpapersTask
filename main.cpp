@@ -54,6 +54,10 @@ int main()
 		cout << "Room #" << i + 1 << " " << allRooms[i].GetRooms() << endl;
 		allRooms[i].PrintRoomsValues();
 	}
+	Flat myFlat(allRooms, numberOfRooms);
+	delete[] allRooms;
+	cout << "- FLAT INFORMATION -" << endl;
+	myFlat.PrintFlat(numberOfRooms);
 
 	cout << "- WALLPAPERS' PARAMETERS -" << endl;
 }

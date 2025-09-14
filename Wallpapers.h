@@ -8,7 +8,11 @@ class Wallpapers
 public:
 	Wallpapers();
 	Wallpapers(const char* wallName, double lenght, double width, double pr);
+	~Wallpapers();
+
+	double WallpaperArea();
+	double NumberOfRolls(double roomArea);
 	void PrintWallpapers();
 	const char* GetWallpapersName();
-	~Wallpapers();
+	
 };

@@ -4,10 +4,38 @@
 #include <iostream>
 using namespace std;
 
-Room::Room() :roomName(nullptr), roomHeight(0.0), roomWidth(0.0), roomLength(0.0), ceiling(0) {}
+Room::Room() 
+{
+	roomName = nullptr;
+	roomHeight = 0.0;
+	roomWidth = 0.0;
+	roomLength = 0.0;
+	ceiling = false;
+}
 Room::~Room()
 {
 	delete[] roomName;
+}
+
+// розрахунки
+double Room::RoomArea()
+{
+	return 2 * roomHeight * (roomWidth + roomLength);
+}
+double Room::CeilingArea()
+{
+	if (ceiling == true)
+	{
+		return roomWidth * roomLength;
+	}
+	else
+	{
+		return 0;
+	}
+}
+double Room::Area()
+{
+	return CeilingArea() + RoomArea();
 }
 
 int Room::RoomCheck()
@@ -68,5 +96,10 @@ void Room::PrintRoomsValues()
 char* Room::GetRooms()
 {
 	return roomName;
+}
+
+double Room::GetHeight()
+{
+	return roomHeight;
 }
 
